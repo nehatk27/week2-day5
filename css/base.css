@@ -15,3 +15,10 @@
   --shade-4: #798777;
 }
 
+
+body {
+  font-family: sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
