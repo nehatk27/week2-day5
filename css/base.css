@@ -6,15 +6,14 @@
   padding: 0;
 }
 
-:root {  
+:root {
   --background-color: #fcf7f2;
   --text-color: #2b2e2b;
-  --shade-1: #F8EDE3;
-  --shade-2: #BDD2B6;
-  --shade-3: #A2B29F;
+  --shade-1: #f8ede3;
+  --shade-2: #bdd2b6;
+  --shade-3: #a2b29f;
   --shade-4: #798777;
 }
-
 
 body {
   font-family: sans-serif;
