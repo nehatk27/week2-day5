@@ -151,3 +151,33 @@ dd:last-of-type {
     margin-bottom: 1.5rem;
   }
 }
+
+#services-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  padding: 4rem;
+}
+
+#services-main h1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+
+.services-article {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+main table {
+  margin: 3rem auto;
+}
+
+@media (max-width: 768px) {
+  .services-article {
+    grid-template-columns: 1fr;
+  }
+}
