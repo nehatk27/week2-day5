@@ -23,7 +23,7 @@ header {
   background-color: var(--shade-1);
   padding: 1rem 2rem;
   border-bottom: 2px solid var(--shade-2);
-  box-shadow: 0px 2px 30px var(--shade-2);
+  box-shadow: 0 2px 30px var(--shade-2);
 }
 
 nav ul {
