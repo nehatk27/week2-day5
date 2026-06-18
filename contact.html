@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <meta
+      name="description"
+      content="Contact page of the Luminar TechnoLab which have the form to contact and shows the map and address of the company."
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./team.html">Team</a></li>
+          <li><a href="./contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contact-main">
+      <h1>Contact form</h1>
+      <form action="/" method="post">
+        <fieldset>
+          <legend>Details:</legend>
+
+          <div class="form-group">
+            <label for="name">Enter your name:*</label>
+            <input type="text" name="name" id="name" required />
+            <span class="status-indicator"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Enter your email:*</label>
+            <input type="email" name="email" id="email" required />
+            <span class="status-indicator"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Enter phone number:*</label>
+            <input type="tel" name="phone" id="phone" required />
+            <span class="status-indicator"></span>
+          </div>
+
+          <div class="form-group select-wrapper">
+            <label for="department">Select Department:*</label>
+            <select name="department" id="department" required>
+              <option value="" disabled selected>Select here...</option>
+              <option value="full-stack">Full-Stack Development</option>
+              <option value="data-analytics">Data Analytics</option>
+              <option value="Frontend">Frontend Development</option>
+              <option value="AI-ML">AI & ML</option>
+              <option value="QA">QA Testing</option>
+            </select>
+            <span class="status-indicator"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message here:</label><br />
+            <textarea name="message" id="message" rows="5" cols="20"></textarea>
+            <span class="status-indicator"></span>
+          </div>
+
+          <div class="checkbox-wrapper">
+            <input type="checkbox" name="newsletter" id="newsletter" />
+            <label for="newsletter"
+              >Subscribe to Newsletter <span class="custom-checkbox"></span
+            ></label>
+          </div>
+          <small>'Fields marked * are required'</small>
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+
+      <h2>Locate us:</h2>
+      <div class="map-container">
+        <iframe
+          title="Map of our Head Office: Kakkanad"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.9752174449804!2d76.34264260000005!3d10.018903600000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080ffce877d5ef%3A0x8bef6870ad11b98!2sLuminar%20Technolab%20-%20Python%2C%20Data%20Science%2C%20AI%2C%20ASP.NET%2C%20Flutter%2C%20Software%20Testing%20Training%20Institute%20in%20Kochi!5e0!3m2!1sen!2sin!4v1781004291233!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <address>
+        Luminar TechnoLab Pvt Ltd, <br />
+        Gound Floor, K7 REALTY, <br />
+        Juma Masjid Road, Kakkanad, Kochi, Kerala - 682030
+      </address>
+    </main>
+    <footer>
+      <small>&copy; 2026 Luminar Technolab. All Rights Reserved</small>
+    </footer>
+  </body>
+</html>
