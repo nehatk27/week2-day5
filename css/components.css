@@ -10,6 +10,11 @@ nav a[aria-current="page"] {
   border-bottom: 2px solid var(--shade-4);
 }
 
+nav a:focus-visible {
+  color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+}
+
 blockquote {
   background-image: linear-gradient(to right, var(--shade-1), var(--shade-2));
   background-color: #ffffff;
@@ -99,7 +104,13 @@ article a:hover {
   color: var(--text-color);
 }
 
-article:hover {
+article a:focus-visible {
+  background-color: var(--shade-2);
+  color: var(--shade-4);
+}
+
+article:hover,
+article:focus-visible {
   transform: translateY(-4px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
   border-top-color: var(--shade-4);
@@ -195,5 +206,25 @@ thead th:nth-child(3) {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(2%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+main {
+  animation: 1s fadeInUp;
+}
+@media (prefers-reduced-motion: reduce) {
+  main {
+    animation: none;
   }
 }

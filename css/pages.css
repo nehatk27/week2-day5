@@ -230,6 +230,10 @@ main table {
   animation: changeOpacity 0.7s ease-in-out forwards;
 }
 
+#team-main figure:focus-visible .socials {
+  color: var(--shade-4);
+}
+
 .content-grid {
   display: flex;
   flex-direction: column;
@@ -359,7 +363,8 @@ main table {
     transform 0.1s ease;
 }
 
-#contact-main button[type="submit"]:hover {
+#contact-main button[type="submit"]:hover,
+#contact-main button[type="submit"]:focus-visible {
   background-color: var(--shade-3);
   color: var(--text-color);
 }
