@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {  
+  --background-color: #fcf7f2;
+  --text-color: #2b2e2b;
+  --shade-1: #F8EDE3;
+  --shade-2: #BDD2B6;
+  --shade-3: #A2B29F;
+  --shade-4: #798777;
+}
+
