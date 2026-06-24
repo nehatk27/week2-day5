@@ -48,8 +48,20 @@
 
     <main id="services-main">
       <h1>Services we Offer:</h1>
+
+      <div class="search-container">
+        <div class="input-wrapper">
+          <input type="text" id="search-input" />
+          <button id="clear-btn" class="hidden" aria-label="Clear search">
+            X
+          </button>
+        </div>
+      </div>
+
+      <div id="no-results" class="hidden">No results found</div>
+
       <div class="services-article">
-        <article>
+        <article class="article-container">
           <h2>Full Stack Web Development</h2>
           <p>
             Master the Art of Building Scalable ApplicationsEquip yourself with
@@ -76,7 +88,7 @@
           >
         </article>
 
-        <article>
+        <article class="article-container">
           <h2>Artificial Intelligence & Data Analytics</h2>
           <p>
             Turn Raw Data into Actionable Business IntelligenceStep into the
@@ -101,7 +113,7 @@
           >
         </article>
 
-        <article>
+        <article class="article-container">
           <h2>Software Testing & Quality Assurance</h2>
           <p>
             Ensure Flawless Software DeliveriesQuality assurance is critical for
@@ -213,5 +225,6 @@
       <small>&copy; 2026 Luminar Technolab. All Rights Reserved</small>
     </footer>
     <script src="navDrawer.js"></script>
+    <script src="search.js"></script>
   </body>
 </html>

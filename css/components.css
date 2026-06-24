@@ -231,3 +231,13 @@ main {
     animation: none;
   }
 }
+
+
+/* ========== live search ========= */
+.hidden{
+  display: none !important;
+}
+
+.highlight{
+  background-color: lightgreen;
+}
