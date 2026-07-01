@@ -149,3 +149,51 @@ table tr td:nth-child(3) {
 thead th:nth-child(3) {
   background-color: var(--text-color);
 }
+
+.socials {
+  display: flex;
+  flex-direction: row;
+}
+
+.socials a {
+  text-decoration: none;
+}
+
+.icon {
+  color: black;
+}
+
+.card {
+  padding: 20px;
+  background-color: var(--shade-1);
+  border: 1px solid var(--shade-4);
+  margin: 0.5rem 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.filter-controls {
+  margin-left: 2rem;
+}
+
+.filter-controls a {
+  text-decoration: none;
+  padding: 8px 16px;
+  background: var(--shade-1);
+  border: 1px solid var(--shade-4);
+  color: var(--text-color);
+  border-radius: 4px;
+}
+
+.filter-controls a:active {
+  background-color: var(--shade-3);
+}
+
+@keyframes changeOpacity {
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
