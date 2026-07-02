@@ -4,15 +4,45 @@ nav a {
   font-weight: bold;
 }
 
+article a {
+  display: inline-block;
+  margin-top: 3rem;
+  background-color: var(--shade-4);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: var(--background-color);
+  border-radius: 1.3rem;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.socials a {
+  text-decoration: none;
+}
+
+.filter-controls a {
+  text-decoration: none;
+  padding: 8px 16px;
+  background: var(--shade-1);
+  border: 1px solid var(--shade-4);
+  color: var(--text-color);
+  border-radius: 4px;
+}
+
 nav a:hover,
 nav a[aria-current="page"] {
   color: var(--shade-4);
   border-bottom: 2px solid var(--shade-4);
 }
 
+nav a:focus-visible {
+  color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+}
+
 blockquote {
   background-image: linear-gradient(to right, var(--shade-1), var(--shade-2));
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 1.5rem;
   border-radius: 7px;
   border-left: 5px solid var(--shade-4);
@@ -26,10 +56,10 @@ blockquote small {
 }
 
 article {
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgb(0 0 0 / 5%);
   border-top: 4px solid var(--shade-3);
   transition:
     transform 0.3s ease,
@@ -78,20 +108,8 @@ address {
   background-color: var(--shade-1);
   border-radius: 8px;
   max-width: 500px;
-  margin: 4rem auto 0 auto;
+  margin: 4rem auto 0;
   border: 1px solid var(--shade-2);
-}
-
-article a {
-  display: inline-block;
-  margin-top: 3rem;
-  background-color: var(--shade-4);
-  padding: 1rem 2rem;
-  text-decoration: none;
-  color: var(--background-color);
-  border-radius: 1.3rem;
-  font-weight: bold;
-  transition: background-color 0.2s ease;
 }
 
 article a:hover {
@@ -99,9 +117,15 @@ article a:hover {
   color: var(--text-color);
 }
 
-article:hover {
+article a:focus-visible {
+  background-color: var(--shade-2);
+  color: var(--shade-4);
+}
+
+article:hover,
+article:focus-visible {
   transform: translateY(-4px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 20px rgb(0 0 0 / 10%);
   border-top-color: var(--shade-4);
 }
 
@@ -111,8 +135,8 @@ article ul {
 
 table {
   width: 90%;
-  background-color: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 5%);
 }
 
 th,
@@ -123,7 +147,7 @@ td {
 
 thead th {
   background-color: var(--shade-4);
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
   position: sticky;
   top: 60px;
@@ -141,7 +165,7 @@ tbody tr:nth-child(even) td {
 }
 
 table tr td:nth-child(3) {
-  background-color: rgba(173, 84, 84, 0.4);
+  background-color: rgb(173 84 84 / 40%);
   border-left: 2px dashed var(--shade-4);
   border-right: 2px dashed var(--shade-4);
 }
@@ -153,10 +177,6 @@ thead th:nth-child(3) {
 .socials {
   display: flex;
   flex-direction: row;
-}
-
-.socials a {
-  text-decoration: none;
 }
 
 .icon {
@@ -176,24 +196,38 @@ thead th:nth-child(3) {
   margin-left: 2rem;
 }
 
-.filter-controls a {
-  text-decoration: none;
-  padding: 8px 16px;
-  background: var(--shade-1);
-  border: 1px solid var(--shade-4);
-  color: var(--text-color);
-  border-radius: 4px;
-}
-
 .filter-controls a:active {
   background-color: var(--shade-3);
 }
 
-@keyframes changeOpacity {
+@keyframes change-opacity {
   1% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    transform: translateY(2%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+main {
+  animation: 1s fade-in-up;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main {
+    animation: none;
   }
 }

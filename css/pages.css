@@ -9,7 +9,7 @@
   font-size: 3rem;
   color: var(--background-color);
   background:
-    linear-gradient(rgba(59, 61, 58, 0.9), rgba(43, 46, 43, 0.9)),
+    linear-gradient(rgb(59 61 58 / 90%), rgb(43 46 43 / 90%)),
     url("https://picsum.photos/id/1/1000/1000") no-repeat center center/cover;
 }
 
@@ -46,13 +46,13 @@
   gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   #home-main section:nth-of-type(1) {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   #home-main section:nth-of-type(1) {
     grid-template-columns: 1fr;
   }
@@ -69,14 +69,14 @@
 
 #about-main h2 {
   text-align: center;
-  margin: 3rem 0 2rem 0;
+  margin: 3rem 0 2rem;
   color: var(--text-color);
   text-decoration: underline;
 }
 
 dl {
   max-width: 800px;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 4rem;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1.5rem 2.5rem;
@@ -129,28 +129,32 @@ dd:last-of-type {
   margin-top: 0;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   #about-main section {
     grid-template-columns: 1fr;
   }
+
   #about-main section h2 {
     grid-column: span 1;
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   dl {
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }
+
   dl::before {
     display: none;
   }
+
   dt {
     text-align: left;
     width: auto;
     padding-right: 0;
   }
+
   dd {
     margin-bottom: 1.5rem;
   }
@@ -182,7 +186,7 @@ main table {
   margin: 3rem auto;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .services-article {
     grid-template-columns: 1fr;
   }
@@ -213,7 +217,7 @@ main table {
 #team-main figure {
   background-color: var(--shade-2);
   padding: 20px;
-  border-radius: 4.5rem 0 1.5rem 0;
+  border-radius: 4.5rem 0 1.5rem;
   border: 1px solid var(--text-color);
   transition: box-shadow 0.3s ease-in-out;
   box-sizing: border-box;
@@ -227,7 +231,11 @@ main table {
 }
 
 #team-main figure:hover .socials {
-  animation: changeOpacity 0.7s ease-in-out forwards;
+  animation: change-opacity 0.7s ease-in-out forwards;
+}
+
+#team-main figure:focus-visible .socials {
+  color: var(--shade-4);
 }
 
 .content-grid {
@@ -245,13 +253,13 @@ main table {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
   #team-main section {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (width <= 480px) {
   #team-main section {
     grid-template-columns: 1fr;
   }
@@ -285,7 +293,7 @@ main table {
   border: 1px solid var(--shade-4);
   border-radius: 8px;
   padding: 2.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 10%);
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
 }
 
 #contact-main fieldset {
@@ -359,7 +367,8 @@ main table {
     transform 0.1s ease;
 }
 
-#contact-main button[type="submit"]:hover {
+#contact-main button[type="submit"]:hover,
+#contact-main button[type="submit"]:focus-visible {
   background-color: var(--shade-3);
   color: var(--text-color);
 }
@@ -371,13 +380,12 @@ main table {
 .map-container {
   display: flex;
   justify-content: center;
-  align-self: center;
-  justify-self: center;
+  place-self: center center;
   border: 2px solid var(--text-color);
   border-radius: 50%;
   height: 23rem;
   width: 23rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgb(0 0 0 / 5%);
   box-sizing: border-box;
 }
 
