@@ -12,8 +12,22 @@ document.addEventListener("DOMContentLoaded", () => {
     originalHTMLs.push(wholeData[i].innerHTML);
   }
 
-  function liveSearch() {
+  function liveSearch(shouldPushState = true) {
     let searchWord = document.getElementById("search-input").value.trim();
+
+    if (shouldPushState) {
+      const searchParams = new URLSearchParams(window.location.search);
+      if (searchWord) {
+        searchParams.set("q", searchWord);
+      } else {
+        searchParams.delete("q");
+      }
+
+      const newRelativePathQuery =
+        window.location.pathname +
+        (searchParams.toString() ? "?" + searchParams.toString() : "");
+      history.pushState(null, "", newRelativePathQuery);
+    }
 
     if (searchWord.length > 0) {
       clearbutton.classList.remove("hidden");
@@ -57,6 +71,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function syncUiAndFiltersFromUrl(shouldPush) {
+    const urlsearchObj = new URLSearchParams(window.location.search);
+    const urlQueryValue = urlsearchObj.get("q");
+    searchInput.value = urlQueryValue || "";
+    liveSearch(shouldPush);
+  }
+
   searchInput.addEventListener("keyup", () => {
     clearTimeout(typingTimer);
     typingTimer = setTimeout(liveSearch, typeInterval);
@@ -67,4 +88,10 @@ document.addEventListener("DOMContentLoaded", () => {
     liveSearch();
     searchInput.focus();
   });
+
+  window.addEventListener("popstate", () => {
+    syncUiAndFiltersFromUrl(false);
+  });
+
+  syncUiAndFiltersFromUrl(false);
 });
