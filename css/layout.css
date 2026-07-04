@@ -39,3 +39,18 @@ footer {
   text-align: center;
   padding: 1.5rem 1rem;
 }
+
+#theme-toggle {
+  background-color: var(--shade-1);
+  color: var(--text-color);
+  padding: 4px 6px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px grey;
+  cursor: pointer;
+  display: flex;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
