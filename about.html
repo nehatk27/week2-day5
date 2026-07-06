@@ -9,18 +9,28 @@
     />
     <title>About</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <script src="js/components/darkMode.js" type="module"></script>
   </head>
 
   <body>
     <header>
-      <nav>
-        <ul>
+      <nav id="nav">
+        <ul id="ul">
           <li><a href="./home.html">Home</a></li>
           <li><a href="./about.html" aria-current="page">About</a></li>
           <li><a href="./services.html">Services</a></li>
           <li><a href="./team.html">Team</a></li>
           <li><a href="./contact.html">Contact</a></li>
         </ul>
+        <button
+          id="theme-toggle"
+          aria-label="Toggle Dark Mode"
+          aria-pressed="false"
+        >
+          Toggle Theme
+        </button>
+
+        <button id="hamburger" aria-expanded="false">&#9776;</button>
       </nav>
     </header>
 
@@ -125,5 +135,6 @@
     <footer>
       <small>&copy; 2026 Luminar Technolab. All Rights Reserved</small>
     </footer>
+    <script src="navDrawer.js"></script>
   </body>
 </html>
