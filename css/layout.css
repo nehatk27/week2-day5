@@ -54,3 +54,43 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+
+#hamburger {
+  padding: 6px 10px;
+  background-color: var(--shade-1);
+  border-radius: 5px;
+  color: var(--text-color);
+  display: none;
+}
+
+.open {
+  background-color: rgb(211 205 194/ 80%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 50px;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.ov-hidden {
+  overflow: hidden;
+}
+
+@media screen and (width <= 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  nav ul,
+  #theme-toggle {
+    display: none;
+  }
+}
