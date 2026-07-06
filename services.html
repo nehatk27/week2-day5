@@ -21,25 +21,47 @@
       content="software training institute in Kochi, Thrissur, Trivandrum & Calicut."
     />
     <meta property="og:site_name" content="Luminar Technolab" />
+    <script src="dark-mode.js"></script>
   </head>
 
   <body>
-    <header>
-      <nav>
-        <ul>
+        <header>
+      <nav id="nav">
+        <ul id="ul">
           <li><a href="./home.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
           <li><a href="./services.html" aria-current="page">Services</a></li>
           <li><a href="./team.html">Team</a></li>
           <li><a href="./contact.html">Contact</a></li>
         </ul>
+        <button
+          id="theme-toggle"
+          aria-label="Toggle Dark Mode"
+          aria-pressed="false"
+        >
+          Toggle Theme
+        </button>
+
+        <button id="hamburger" aria-expanded="false">&#9776;</button>
       </nav>
     </header>
 
     <main id="services-main">
       <h1>Services we Offer:</h1>
+
+      <div class="search-container">
+        <div class="input-wrapper">
+          <input type="text" id="search-input" />
+          <button id="clear-btn" class="hidden" aria-label="Clear search">
+            X
+          </button>
+        </div>
+      </div>
+
+      <div id="no-results" class="hidden">No results found</div>
+
       <div class="services-article">
-        <article>
+        <article class="article-container">
           <h2>Full Stack Web Development</h2>
           <p>
             Master the Art of Building Scalable ApplicationsEquip yourself with
@@ -66,7 +88,7 @@
           >
         </article>
 
-        <article>
+        <article class="article-container">
           <h2>Artificial Intelligence & Data Analytics</h2>
           <p>
             Turn Raw Data into Actionable Business IntelligenceStep into the
@@ -91,7 +113,7 @@
           >
         </article>
 
-        <article>
+        <article class="article-container">
           <h2>Software Testing & Quality Assurance</h2>
           <p>
             Ensure Flawless Software DeliveriesQuality assurance is critical for
@@ -202,5 +224,7 @@
     <footer>
       <small>&copy; 2026 Luminar Technolab. All Rights Reserved</small>
     </footer>
+    <script src="navDrawer.js"></script>
+    <script src="search.js"></script>
   </body>
 </html>

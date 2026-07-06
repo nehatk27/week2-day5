@@ -39,3 +39,58 @@ footer {
   text-align: center;
   padding: 1.5rem 1rem;
 }
+
+#theme-toggle {
+  background-color: var(--shade-1);
+  color: var(--text-color);
+  padding: 4px 6px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px grey;
+  cursor: pointer;
+  display: flex;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+#hamburger {
+  padding: 6px 10px;
+  background-color: var(--shade-1);
+  border-radius: 5px;
+  color: var(--text-color);
+  display: none;
+}
+
+.open {
+  background-color: rgb(211 205 194/ 80%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 50px;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.ov-hidden {
+  overflow: hidden;
+}
+
+@media screen and (width <= 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  nav ul,
+  #theme-toggle {
+    display: none;
+  }
+}
