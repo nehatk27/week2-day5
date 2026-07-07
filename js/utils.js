@@ -16,14 +16,16 @@ export async function fetchJSON(url) {
 
 export function showToast(type, msg, delay) {
   const toastContainer = document.getElementById("toast-container");
+  if (!toastContainer) return;
 
   let box = document.createElement("div");
   box.classList.add("toast", `toast-${type}`);
-  toastMsg = document.createElement("p");
+  const toastMsg = document.createElement("p");
   toastMsg.classList.add("toast-msg");
+  toastMsg.textContent = msg;
 
   toastContainer.appendChild(box);
   box.appendChild(toastMsg);
 
-  setTimeout(toastMsg.remove(), delay);
+  setTimeout(() => box.remove(), delay);
 }

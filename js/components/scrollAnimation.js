@@ -31,6 +31,7 @@ articles.forEach((article) => animatorObserver.observe(article));
 const progressBar = document.getElementById("progress-bar");
 
 window.addEventListener("scroll", () => {
+  if (!progressBar) return;
   const currentScroll = window.scrollY;
   const totalHeight = document.documentElement.scrollHeight;
   const screenHeight = window.innerHeight;
