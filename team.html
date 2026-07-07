@@ -13,29 +13,12 @@
       name="description"
       content="Team page of the Luminar TechnoLab which shows the details about the company team members."
     />
-    <script src="js/components/darkMode.js" type="module"></script>
+    <script src="js/components/nav.js" type="module"></script>
   </head>
 
   <body>
     <header>
-      <nav id="nav">
-        <ul id="ul">
-          <li><a href="./home.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./services.html">Services</a></li>
-          <li><a href="./team.html" aria-current="page">Team</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-        </ul>
-        <button
-          id="theme-toggle"
-          aria-label="Toggle Dark Mode"
-          aria-pressed="false"
-        >
-          Toggle Theme
-        </button>
-
-        <button id="hamburger" aria-expanded="false">&#9776;</button>
-      </nav>
+      <nav id="nav"></nav>
     </header>
 
     <div id="filter-dev"></div>
@@ -367,6 +350,11 @@
     <footer>
       <small>&copy; 2026 Luminar Technolab. All Rights Reserved</small>
     </footer>
+    <button id="back-to-top" aria-label="Back to top" title="Go to top">
+      ↑
+    </button>
+    <script src="js/components/darkMode.js" type="module"></script>
     <script src="navDrawer.js"></script>
+    <script src="js/components/scrollAnimation.js"></script>
   </body>
 </html>

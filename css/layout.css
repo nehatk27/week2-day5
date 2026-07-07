@@ -94,3 +94,36 @@ nav {
     display: none;
   }
 }
+
+/* === back to top button ==== */
+
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: -60px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background-color: #1a252f;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
+  z-index: 2000;
+  opacity: 0;
+  transition:
+    right 0.4s ease,
+    opacity 0.4s ease,
+    background-color 0.2s ease;
+}
+
+#back-to-top:hover {
+  background-color: #3498db;
+}
+
+#back-to-top.show {
+  right: 30px;
+  opacity: 1;
+}
