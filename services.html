@@ -21,25 +21,30 @@
       content="software training institute in Kochi, Thrissur, Trivandrum & Calicut."
     />
     <meta property="og:site_name" content="Luminar Technolab" />
+    <script src="js/components/nav.js" type="module"></script>
   </head>
 
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="./home.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./services.html" aria-current="page">Services</a></li>
-          <li><a href="./team.html">Team</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <nav id="nav"></nav>
     </header>
 
     <main id="services-main">
       <h1>Services we Offer:</h1>
+
+      <div class="search-container">
+        <div class="input-wrapper">
+          <input type="text" id="search-input" />
+          <button id="clear-btn" class="hidden" aria-label="Clear search">
+            X
+          </button>
+        </div>
+      </div>
+
+      <div id="no-results" class="hidden">No results found</div>
+
       <div class="services-article">
-        <article>
+        <article class="article-container">
           <h2>Full Stack Web Development</h2>
           <p>
             Master the Art of Building Scalable ApplicationsEquip yourself with
@@ -66,7 +71,7 @@
           >
         </article>
 
-        <article>
+        <article class="article-container">
           <h2>Artificial Intelligence & Data Analytics</h2>
           <p>
             Turn Raw Data into Actionable Business IntelligenceStep into the
@@ -91,7 +96,7 @@
           >
         </article>
 
-        <article>
+        <article class="article-container">
           <h2>Software Testing & Quality Assurance</h2>
           <p>
             Ensure Flawless Software DeliveriesQuality assurance is critical for
@@ -122,6 +127,8 @@
           >
         </article>
       </div>
+
+      <div class="services-article" id="fictional-services"></div>
 
       <table>
         <thead>
@@ -198,9 +205,66 @@
           </tr>
         </tbody>
       </table>
+
+      <div class="accordian">
+        <button
+          class="accordian-button"
+          aria-expanded="false"
+          aria-controls="panel-1"
+        >
+          Question 1: &#9660;
+        </button>
+        <p class="hidden" id="panel-1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </p>
+
+        <button
+          class="accordian-button"
+          aria-expanded="false"
+          aria-controls="panel-2"
+        >
+          Question 2: &#9660;
+        </button>
+        <p class="hidden" id="panel-2">
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa
+          qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <button
+          class="accordian-button"
+          aria-expanded="false"
+          aria-controls="panel-3"
+        >
+          Question 3: &#9660;
+        </button>
+        <p class="hidden" id="panel-3">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
     </main>
     <footer>
       <small>&copy; 2026 Luminar Technolab. All Rights Reserved</small>
     </footer>
+    <button id="back-to-top" aria-label="Back to top" title="Go to top">
+      ↑
+    </button>
+    <script src="js/components/accordian.js"></script>
+    <script src="js/components/darkMode.js" type="module"></script>
+    <script src="navDrawer.js"></script>
+    <script src="js/components/apiContent.js"></script>
+    <script src="search.js"></script>
+    <script src="js/components/scrollAnimation.js"></script>
   </body>
 </html>
