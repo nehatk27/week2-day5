@@ -299,10 +299,6 @@ main table {
   color: var(--shade-4);
 }
 
-#team-main figure:focus-visible .socials {
-  color: var(--shade-4);
-}
-
 .content-grid {
   display: flex;
   flex-direction: column;
