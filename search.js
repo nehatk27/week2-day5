@@ -1,8 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("servicesContentReady", () => {
   const wholeData = document.querySelectorAll(".article-container");
   let searchInput = document.getElementById("search-input");
   let clearbutton = document.getElementById("clear-btn");
   let notmatch = document.getElementById("no-results");
+  if (!searchInput) return;
 
   let typingTimer;
   let typeInterval = 300;
