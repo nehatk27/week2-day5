@@ -1,5 +1,6 @@
-const navBar = document.getElementById("nav");
-navBar.innerHTML = `
+export function init() {
+  const navBar = document.getElementById("nav");
+  navBar.innerHTML = `
     <ul id="ul">
         <li><a href="./home.html">Home</a></li>
         <li><a href="./about.html">About</a></li>
@@ -15,3 +16,4 @@ navBar.innerHTML = `
 
     <button id="hamburger" aria-expanded="false">&#9776;</button>
 `;
+}
