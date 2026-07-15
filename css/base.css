@@ -13,6 +13,7 @@
   --shade-2: #bdd2b6;
   --shade-3: #a2b29f;
   --shade-4: #798777;
+  --white: #fff;
 }
 
 body {
@@ -20,4 +21,21 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
+}
+
+[data-theme="dark"] {
+  --background-color: #2b2e2b;
+  --text-color: #fcf7f2;
+  --shade-1: #798777;
+  --shade-2: #a2b29f;
+  --shade-3: #bdd2b6;
+  --shade-4: #f8ede3;
+  --white: #5c5c5c;
+}
+
+.optimize-performance *,
+.optimize-performance *::before,
+.optimize-performance *::after {
+  animation: none !important;
+  transition: none !important;
 }

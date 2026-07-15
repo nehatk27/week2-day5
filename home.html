@@ -21,19 +21,12 @@
     />
     <meta property="og:site_name" content="Luminar Technolab" />
     <link rel="stylesheet" href="./css/main.css" />
+    <script src="js/main.js" type="module"></script>
   </head>
 
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="./home.html" aria-current="page">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./services.html">Services</a></li>
-          <li><a href="./team.html">Team</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <nav id="nav"></nav>
     </header>
 
     <main id="home-main">
@@ -111,9 +104,17 @@
           </p>
         </blockquote>
       </section>
+
+      <section id="latest-news-section">
+        <h2>Latest News:</h2>
+        <div id="latest-container"></div>
+      </section>
     </main>
     <footer>
       <small>&copy; 2026 Luminar Technolab. All Rights Reserved</small>
     </footer>
+    <button id="back-to-top" aria-label="Back to top" title="Go to top">
+      ↑
+    </button>
   </body>
 </html>
