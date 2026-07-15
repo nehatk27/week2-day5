@@ -30,5 +30,12 @@ body {
   --shade-2: #a2b29f;
   --shade-3: #bdd2b6;
   --shade-4: #f8ede3;
-  --white:#5c5c5c;
+  --white: #5c5c5c;
+}
+
+.optimize-performance *,
+.optimize-performance *::before,
+.optimize-performance *::after {
+  animation: none !important;
+  transition: none !important;
 }

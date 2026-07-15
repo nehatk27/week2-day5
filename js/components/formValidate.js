@@ -1,6 +1,12 @@
 import { showToast } from "../utils.js";
 
 export function init() {
+  const formElement = document.querySelector("#registrationForm");
+
+  if (!formElement) {
+    return;
+  }
+
   const validationRules = {
     name: [
       { type: "required", message: "Name cannot be blank" },
